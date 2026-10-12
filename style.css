@@ -1,0 +1,108 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Base layout & gradient background */
+body.hero-body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #eef2f3 0%, #8e9eab 100%);
+    min-height: 100vh;
+}
+
+/* Glassmorphism card container */
+.glass-card {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Card hover animation */
+.glass-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-label {
+    font-weight: 600;
+    font-size: 0.88rem;
+    color: #2c3e50;
+    margin-bottom: 0.4rem;
+}
+
+/* Common form control styling */
+.form-control, 
+.form-select, 
+.input-group-text {
+    border-radius: 10px;
+    padding: 0.65rem 0.9rem;
+    font-size: 0.95rem;
+    border: 1px solid #dce1e7;
+    background-color: #fdfdfd;
+}
+
+/* Seamless input-group integration */
+.input-group-text {
+    background-color: #f1f4f8;
+    color: #6c757d;
+    border-right: none;
+}
+
+.input-group .form-control {
+    border-left: none;
+}
+
+.input-group .form-control:focus {
+    border-left: 1px solid #86b7fe;
+}
+
+/* Focus glow effect */
+.form-control:focus, 
+.form-select:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+    background-color: #ffffff;
+}
+
+/* Option group box for radio/checkboxes */
+.custom-selection-group {
+    background-color: #f8fafc;
+    border: 1px solid #dce1e7;
+    border-radius: 10px;
+    padding: 0.65rem 0.9rem;
+}
+
+.form-check-input:checked {
+    background-color: #3b82f6;
+    border-color: #3b82f6;
+}
+
+/* Action button animation */
+.btn-action {
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+.btn-action:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+/* Custom validation feedback toggle */
+.hidden-feedback {
+    display: none;
+}
+
+.was-validated .form-check-input:invalid ~ .hidden-feedback {
+    display: block;
+}
